@@ -1,0 +1,154 @@
+{% extends "_includes/default.njk" %}
+{% block title %}Antojitos Latino Americano{% endblock %}
+{% block head %}
+  <script defer="true" src="./js/index.js"></script>
+{% endblock %}
+{% block content %}
+  <header class="p-4 bg-secondary text-coolGray-800 relative">
+    <div class="container flex justify-between h-16 mx-auto">
+      <a rel="noopener noreferrer" href="#" aria-label="Back to homepage" class="flex items-center p-2">
+        <img src="./images/mexico.svg" width="100px" alt="">
+      </a>
+      <ul class="h-screen items-stretch flex-col bg-secondary  fixed top-0 right-0 translate-x-full w-3/5 pt-14 md:translate-x-0 md:w-auto md:h-auto md:pt-0 md:static md:flex md:flex-row" id="mobile-dropdown">
+        <li class="flex">
+          <a rel="noopener noreferrer" href="#" class="flex w-full items-center px-6 py-6 -mb-1 border-b-2 border-transparent hover:text-primary-dark hover:border-primary-dark">Home</a>
+        </li>
+        <li class="flex">
+          <a rel="noopener noreferrer" href="#" class="flex w-full items-center px-6 py-6 -mb-1 border-b-2 border-transparent hover:text-primary-dark hover:border-primary-dark">About</a>
+        </li>
+        <li class="flex">
+          <a rel="noopener noreferrer" href="#" class="flex w-full items-center px-6 py-6 -mb-1 border-b-2 border-transparent hover:text-primary-dark hover:border-primary-dark">Menu</a>
+        </li>
+      </ul>
+      <button class="fixed top right-0 flex justify-end p-4 md:hidden" aria-expanded="false" aria-controls="mobile-dropdown">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+  <!-- HERO SECTION -->
+  <section class="bg-coolGray-100 text-coolGray-800">
+    <div class="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+      <div class="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+        <h1 class="text-5xl font-bold leading-none sm:text-6xl">Antojitos
+          <span class="block text-emerald-400">El Sabor</span>
+          Latino Americano
+        </h1>
+        <p class="mt-6 mb-8 font-sans-jost text-lg sm:mb-12">Latin American flavors,
+          <br class="hidden md:inline lg:hidden">
+          snacks, desserts, and cravings
+        </p>
+      </div>
+      <div class="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+        <img src="./images/hero-img2.jpg" alt="" class="object-cover h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 bg-coolGray-500">
+      </div>
+    </div>
+  </section>
+  <!-- ABOUT SECTION -->
+  <section class="bg-coolGray-100 text-coolGray-800">
+    <div class="container flex flex-col mx-auto lg:flex-row">
+      <div class="w-full lg:w-1/3" style="background-image: url('./images/hero-img.jpg'); background-position: center center; background-size: cover;"></div>
+      <div class="flex flex-col w-full p-6 lg:w-2/3 md:p-8 lg:p-12">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" fill="currentColor" class="w-8 h-8 mb-8 text-emerald-400">
+          <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541
+              3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+        </svg>
+        <h2 class="text-3xl font-semibold leading-none">What are Antojitos?</h2>
+        <p class="mt-4 mb-8 text-lg font-sans-jost">Antojitos, translated as “little cravings,” are family of foods that range between street snacks and appetizers. Usually small, savory comfort foods.</p>
+      </div>
+    </div>
+  </section>
+  <!-- MENU SECTION -->
+  <section class="py-6 sm:py-12 bg-coolGray-100 text-coolGray-800">
+    <div class="container p-6 mx-auto space-y-8">
+      <div class="space-y-2 text-center">
+        <h2 class="text-3xl font-bold">Our Menu</h2>
+        <p class="font-serif text-lg text-coolGray-600">Made with the fresh ingredients.</p>
+      </div>
+      <div class="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
+        <article class="flex flex-col bg-coolGray-50">
+          <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
+            <img alt="" class="object-cover w-full h-52 bg-coolGray-500" src="./images/elote.jpg">
+          </a>
+          <div class="flex flex-col flex-1 p-6">
+            <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum"></a>
+            <a rel="noopener noreferrer" href="#" class="text-md tracking-wider uppercase hover:underline text-accent">Elote</a>
+            <h3 class="flex-1 py-2 text-lg font-semibold text-emerald-600 leading-snug">
+              Corn served with butter, mayonnaise, grated cotija cheese, chile powder, lemon juice, and salt.</h3>
+          </div>
+        </article>
+        <article class="flex flex-col bg-coolGray-50">
+          <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
+            <img alt="" class="object-cover w-full h-52 bg-coolGray-500" src="./images/raspado.jpg">
+          </a>
+          <div class="flex flex-col flex-1 p-6">
+            <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum"></a>
+            <a rel="noopener noreferrer" href="#" class="text-md tracking-wider uppercase hover:underline text-accent">Raspado</a>
+            <h3 class="flex-1 py-2 text-lg font-semibold text-emerald-600 leading-snug">Shaved ice that can be topped with fresh fruit, syrup, milk, and more.</h3>
+          </div>
+        </article>
+        <article class="flex flex-col bg-coolGray-50">
+          <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
+            <img alt="" class="object-cover w-full h-52 bg-coolGray-500" src="./images/ice-cream.jpg">
+          </a>
+          <div class="flex flex-col flex-1 p-6">
+            <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum"></a>
+            <a rel="noopener noreferrer" href="#" class="text-md tracking-wider uppercase hover:underline text-accent">Ice-cream</a>
+            <h3 class="flex-1 py-2 text-lg font-semibold text-emerald-600 leading-snug">We have many flavors of ice-cream to choose from.</h3>
+          </div>
+        </article>
+        <article class="flex flex-col bg-coolGray-50">
+          <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
+            <img alt="" class="object-cover w-full h-52 bg-coolGray-500" src="./images/fruit-salad2.jpg">
+          </a>
+          <div class="flex flex-col flex-1 p-6">
+            <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum"></a>
+            <a rel="noopener noreferrer" href="#" class="text-md tracking-wider uppercase hover:underline text-accent">Fruit Salads</a>
+            <h3 class="flex-1 py-2 text-lg font-semibold text-emerald-600 leading-snug">Made with fresh fruit and ingredients. Try out different combinations.</h3>
+          </div>
+        </article>
+        <article class="flex flex-col bg-coolGray-50">
+          <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
+            <img alt="" class="object-cover w-full h-52 bg-coolGray-500" src="./images/snacks.jpg">
+          </a>
+          <div class="flex flex-col flex-1 p-6">
+            <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum"></a>
+            <a rel="noopener noreferrer" href="#" class="text-md tracking-wider uppercase hover:underline text-accent">Snacks</a>
+            <h3 class="flex-1 py-2 text-lg font-semibold text-emerald-600 leading-snug">Snacks made using your favorite chips and toppings.</h3>
+          </div>
+        </article>
+        <article class="flex flex-col bg-coolGray-50">
+          <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
+            <img alt="" class="object-cover w-full h-52 bg-coolGray-500" src="./images/smoothies.webp">
+          </a>
+          <div class="flex flex-col flex-1 p-6">
+            <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum"></a>
+            <a rel="noopener noreferrer" href="#" class="text-md tracking-wider uppercase hover:underline text-accent">Smoothies</a>
+            <h3 class="flex-1 py-2 text-lg font-semibold text-emerald-600 leading-snug">Fresh fruit, ice, milk or ice-cream, blended into a delicious drink.</h3>
+          </div>
+        </article>
+        <!---->
+      </div>
+    </div>
+  </section>
+  <!-- FOOTER SECTION -->
+  <footer class="px-4 py-8 bg-secondary text-primary-dark">
+    <div class="container flex flex-wrap items-center justify-center mx-auto space-y-4 sm:justify-between sm:space-y-0">
+      <div class="flex flex-row pr-3 space-x-4 sm:space-x-8">
+        <a class="text-md text-bold text-primary-dark" href="/">Antojitos Latino Americano</a>
+      </div>
+      <ul class="flex flex-wrap pl-3 space-x-4 sm:space-x-8">
+        <li>
+          <a rel="noopener noreferrer" href="#">Instagram</a>
+        </li>
+        <li>
+          <a rel="noopener noreferrer" href="#">Facebook</a>
+        </li>
+        <li>
+          <a rel="noopener noreferrer" href="#">Twitter</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+{% endblock %}
